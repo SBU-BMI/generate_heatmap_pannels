@@ -13,6 +13,7 @@ output_pred = '4panel_pngs'
 prefix = "prediction-"
 wsi_extension = ".svs"
 skip_first_line_pred = True
+is_cancer_wsiID_same_til_wsiID = True
 
 fns = [fn.split('prediction-')[-1] for fn in os.listdir(til_fol) if fn.startswith('prediction-') and not fn.endswith('low_res')]
 til_wsiID_map = collections.defaultdict(str)
