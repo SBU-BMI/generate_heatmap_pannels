@@ -8,6 +8,8 @@ There are different branches for different tumor types.
 - 3_classes_prad: for 3-way classification, especially for PRAD.
 - 6_classes_luad: for 6-way classification, especially for LUAD.
 
+NOTE: please make sure that the filename of prediction-xxx and color-xxx files of the same WSIs in cancer_fol and til_fol the SAME. For example, if the WSI is TCGA-TD-XL01-01-DX1, then there is one "prediction-TCGA-TD-XL01-01-DX1" and one "color-TCGA-TD-XL01-01-DX1" file in cancer_fol and one "prediction-TCGA-TD-XL01-01-DX1", one "color-TCGA-TD-XL01-01-DX1" files in til_fol
+
 The run instructions are the same for all branches.
 
 ## Setup Parameters
