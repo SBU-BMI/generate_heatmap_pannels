@@ -15,10 +15,10 @@ You need to change the path in the following codes in main.py. The variable name
 
 ```python
 # these folders will be replaced by paramaters
-svs_fol = '/data01/shared/hanle/svs_tcga_paad'
-cancer_fol = '/data04/shared/hanle/paad_prediction/data/heatmap_txt_190_tcga'
-til_fol = '/data04/shared/shahira/TIL_heatmaps/PAAD/vgg_mix_binary/heatmap_txt'
-output_pred = '4panel_pngs'
+svs_fol = '/data01/shared/hanle/svs_tcga_paad'  # path to the folder that contains the WSIs
+cancer_fol = '/data04/shared/hanle/paad_prediction/data/heatmap_txt_190_tcga' # path to folder that contains the prediction-xxx and color-xxx files from the cancer model. This is the output of cancer model, e.g quip_lung_cancer_detection/data/heatmap_txt/
+til_fol = '/data04/shared/shahira/TIL_heatmaps/PAAD/vgg_mix_binary/heatmap_txt' # similar to the cancer_fol but this is the prediction-xxx  and color-xxx files from the TIL pipeline
+output_pred = '4panel_pngs'   # path to the output, can be anything of your choice
 
 prefix = "prediction-"
 wsi_extension = ".svs"
