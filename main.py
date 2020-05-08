@@ -6,7 +6,7 @@ from StagedTumorHeatMap import StagedTumorHeatMap
 
 # these folders will be replaced by paramaters
 svs_fol = '/data01/tcga_data/tumor/luad'
-staged_pred = '/data04/shared/hanle/quip_lung_cancer_detection_LUAD_TCGA/data/heatmap_txt_6classes_with_headers'
+cancer_fol = '/data04/shared/hanle/quip_lung_cancer_detection_LUAD_TCGA/data/heatmap_txt_6classes_with_headers'
 til_fol = '/data04/shared/shahira/TIL_heatmaps/LUAD/vgg_mix_binary/heatmap_txt'
 output_pred = '4panel_pngs'
 
@@ -26,9 +26,9 @@ def checkFileExisting(wsiId):
         til_wsiID = til_wsiID_map[wsiId]  # if cancer id is different from til slide id
 
     allPath = [
-        os.path.join(staged_pred, 'color-' + wsiId), # colorPath
+        os.path.join(cancer_fol, 'color-' + wsiId), # colorPath
         os.path.join(svs_fol, wsiId + wsi_extension), # svsPath
-        os.path.join(staged_pred, prefix + wsiId), # predPath
+        os.path.join(cancer_fol, prefix + wsiId), # predPath
         os.path.join(til_fol, 'prediction-' + til_wsiID), # tilPath_pred
         os.path.join(til_fol, 'color-' + til_wsiID), # tilPath_color
     ]
@@ -55,7 +55,7 @@ def gen1Image(fn):
     til_heatmap.setWidthHeightByOSlide(oslide)
     til_map = til_heatmap.getHeatMapByID(til_wsiID)
 
-    stagedCancerFile = StagedTumorHeatMap(staged_pred, skip_first_line_pred)
+    stagedCancerFile = StagedTumorHeatMap(cancer_fol, skip_first_line_pred)
     stagedCancerFile.setWidthHeightByOSlide(oslide)
     stagedCancerMap = stagedCancerFile.getHeatMapByID(wsiId)
     classificationMap = stagedCancerFile.getStageClassificationTilMap(tilMap=til_map)
