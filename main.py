@@ -8,7 +8,7 @@ from StagedTumorHeatMap import StagedTumorHeatMap
 svs_fol = '/data01/tcga_data/tumor/luad'
 cancer_fol = '/data04/shared/hanle/quip_lung_cancer_detection_LUAD_TCGA/data/heatmap_txt_6classes_with_headers'
 til_fol = '/data04/shared/shahira/TIL_heatmaps/LUAD/vgg_mix_binary/heatmap_txt'
-output_pred = '4panel_pngs'
+output_pred = '4panel_pngs_luad'
 
 prefix = "prediction-"
 wsi_extension = ".svs"
