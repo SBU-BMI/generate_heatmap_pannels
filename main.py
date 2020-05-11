@@ -5,13 +5,13 @@ from HeatMap import HeatMap
 from StagedTumorHeatMap import StagedTumorHeatMap
 
 # these folders will be replaced by paramaters
-svs_fol = '/data02/shared/hanle/svs_tcga_prad/'
-cancer_fol = '/data04/shared/hanle/quip_prad_cancer_detection_TCGA/data/heatmap_txt_3classes_with_headers'
-til_fol = '/data04/shared/shahira/TIL_heatmaps/PRAD/vgg_mix_binary/heatmap_txt'
+svs_fol = '/data10/shared/hanle/svs_SEER_PRAD'
+cancer_fol = '/data04/shared/hanle/prad_cancer_detection_SEER/data/heatmap_txt_3classes_header_seer1'
+til_fol = '/data02/shared/hanle/seer-prad-TIL-heatmap'
 output_pred = '4panel_pngs'
 
 prefix = "prediction-"
-wsi_extension = ".svs"
+wsi_extension = ".tif"
 skip_first_line_pred = True
 is_cancer_wsiID_same_til_wsiID = True
 
