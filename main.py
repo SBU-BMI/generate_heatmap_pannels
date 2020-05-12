@@ -8,7 +8,7 @@ from StagedTumorHeatMap import StagedTumorHeatMap
 svs_fol = '/data10/shared/hanle/svs_SEER_PRAD'
 cancer_fol = '/data04/shared/hanle/prad_cancer_detection_SEER/data/heatmap_txt_3classes_header_seer1'
 til_fol = '/data02/shared/hanle/seer-prad-TIL-heatmap'
-output_pred = '4panel_pngs'
+output_pred = '4panel_pngs_3classes'
 
 prefix = "prediction-"
 wsi_extension = ".tif"
