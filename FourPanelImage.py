@@ -10,7 +10,7 @@ class FourPanelImage(object):
         self.savePath = savePath
 
     def saveImg(self):
-        shape = (self.cancerMap.shape[1] * 2, self.cancerMap.shape[0] * 2)
+        shape = (self.tilMap.shape[1] * 4, self.tilMap.shape[0] * 4)
         thumbnail = self.oslide.get_thumbnail(shape)
 
         mergedMap = MergedHeatMap(self.cancerMap, self.tilMap).mergedHeatMap
