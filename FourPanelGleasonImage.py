@@ -10,7 +10,7 @@ class FourPanelGleasonImage(object):
         self.savePath = savePath
 
     def saveImg(self):
-        shape = (self.classificationMap.shape[1] * 2, self.classificationMap.shape[0] * 2)
+        shape = (self.classificationMap.shape[1] * 4, self.classificationMap.shape[0] * 4)
         thumbnail = self.oslide.get_thumbnail(shape)
 
         cancerImg = self.cancerImg
